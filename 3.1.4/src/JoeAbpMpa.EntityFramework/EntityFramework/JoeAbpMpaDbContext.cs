@@ -11,6 +11,8 @@ namespace JoeAbpMpa.EntityFramework
     public class JoeAbpMpaDbContext : AbpZeroDbContext<Tenant, Role, User>
     {
         //TODO: Define an IDbSet for your Entities...
+        public IDbSet<Asset> Assets { get; set; }
+
         public IDbSet<Device> Devices { get; set; }
 
         public IDbSet<AssetCategory> AssetCategories { get; set; }
