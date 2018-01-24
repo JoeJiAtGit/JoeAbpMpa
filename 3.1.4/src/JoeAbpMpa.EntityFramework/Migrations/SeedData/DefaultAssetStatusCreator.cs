@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace JoeAbpMpa.Entities
+namespace JoeAbpMpa.Migrations.SeedData
 {
-    class Person
+    class DefaultAssetStatusCreator
     {
     }
 }

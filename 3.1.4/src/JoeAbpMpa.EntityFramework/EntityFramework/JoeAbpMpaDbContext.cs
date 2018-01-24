@@ -1,7 +1,9 @@
 ﻿using System.Data.Common;
+using System.Data.Entity;
 using Abp.Zero.EntityFramework;
 using JoeAbpMpa.Authorization.Roles;
 using JoeAbpMpa.Authorization.Users;
+using JoeAbpMpa.Entities;
 using JoeAbpMpa.MultiTenancy;
 
 namespace JoeAbpMpa.EntityFramework
@@ -9,6 +11,13 @@ namespace JoeAbpMpa.EntityFramework
     public class JoeAbpMpaDbContext : AbpZeroDbContext<Tenant, Role, User>
     {
         //TODO: Define an IDbSet for your Entities...
+        public IDbSet<Device> Devices { get; set; }
+
+        public IDbSet<AssetCategory> AssetCategories { get; set; }
+
+        public IDbSet<AssetStatus> AssetStatuses { get; set; }
+
+        public IDbSet<Department> Department { get; set; }
 
         /* NOTE: 
          *   Setting "Default" to base class helps us when working migration commands on Package Manager Console.
