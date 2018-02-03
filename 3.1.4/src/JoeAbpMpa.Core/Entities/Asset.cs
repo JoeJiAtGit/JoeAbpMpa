@@ -10,29 +10,26 @@ namespace JoeAbpMpa.Entities
     /// <summary>
     /// Represents an Asset entity.
     /// </summary>
-    public class Asset : Entity<string>
+    public class Asset : Entity
     {
         //64kb
         public const int MaxDescriptionLength = 64 * 1024;
 
-        /// <summary>
-        /// Override for display name in db.
-        /// </summary>
-        [Column("AssetNo")]
-        public override string Id { get => base.Id; set => base.Id = value; }
+        [Required]
+        public string AssetNo { get; set; }
 
         /// <summary>
         /// Describes the asset.
         /// </summary>
         [MaxLength(MaxDescriptionLength)]
-        public virtual string AssetDescription { get; set; }
+        public virtual string Description { get; set; }
 
         /// <summary>
         /// Database field for Device reference.
         /// Needed for EntityFramework, no need for NHibernate.
         /// </summary>
         [Required]
-        public virtual string DeviceId { get; set; }
+        public virtual int DeviceId { get; set; }
 
         /// <summary>
         /// Database field for AssetCategory reference.
@@ -77,7 +74,6 @@ namespace JoeAbpMpa.Entities
         /// A reference (navigation property) to device <see cref="Device"/> for this asset.
         /// We declare <see cref="ForeignKeyAttribute"/> for EntityFramework here. No need for NHibernate.
         /// </summary>
-        [ForeignKey("DeviceId")]
         public virtual Device Device { get; set; }
 
         public virtual AssetCategory AssetCategory { get; set; }
@@ -87,6 +83,5 @@ namespace JoeAbpMpa.Entities
         public virtual Department Department { get; set; }
 
         public virtual User User { get; set; }
-
     }
 }

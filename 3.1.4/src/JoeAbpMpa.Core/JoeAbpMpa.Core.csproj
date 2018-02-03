@@ -184,6 +184,7 @@
     <Compile Include="Entities\Department.cs" />
     <Compile Include="Entities\Device.cs" />
     <Compile Include="Entities\AssetCategory.cs" />
+    <Compile Include="IRepositories\IAssetRepository.cs" />
     <Compile Include="JoeAbpMpaConsts.cs" />
     <Compile Include="JoeAbpMpaCoreModule.cs" />
     <Compile Include="AppVersionHelper.cs" />

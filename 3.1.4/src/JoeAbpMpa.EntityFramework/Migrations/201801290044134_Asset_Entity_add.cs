@@ -3,7 +3,7 @@ namespace JoeAbpMpa.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class Add_AssetEntity : DbMigration
+    public partial class Asset_Entity_add : DbMigration
     {
         public override void Up()
         {
@@ -21,9 +21,10 @@ namespace JoeAbpMpa.Migrations
                 "dbo.Assets",
                 c => new
                     {
-                        AssetNo = c.String(nullable: false, maxLength: 128),
-                        AssetDescription = c.String(),
-                        DeviceId = c.String(nullable: false, maxLength: 128),
+                        Id = c.Int(nullable: false, identity: true),
+                        AssetNo = c.String(nullable: false),
+                        Description = c.String(),
+                        DeviceId = c.Int(nullable: false),
                         AssetCategoryId = c.Int(nullable: false),
                         AssetStatusId = c.Int(nullable: false),
                         DateAcquired = c.DateTime(nullable: false),
@@ -33,7 +34,7 @@ namespace JoeAbpMpa.Migrations
                         Remark = c.String(),
                         User_Id = c.Long(),
                     })
-                .PrimaryKey(t => t.AssetNo)
+                .PrimaryKey(t => t.Id)
                 .ForeignKey("dbo.AssetCategories", t => t.AssetCategoryId, cascadeDelete: true)
                 .ForeignKey("dbo.AssetStatus", t => t.AssetStatusId, cascadeDelete: true)
                 .ForeignKey("dbo.Departments", t => t.DepartmentId, cascadeDelete: true)
@@ -69,7 +70,8 @@ namespace JoeAbpMpa.Migrations
                 "dbo.Devices",
                 c => new
                     {
-                        Id = c.String(nullable: false, maxLength: 128),
+                        Id = c.Int(nullable: false, identity: true),
+                        DeviceNo = c.String(nullable: false),
                         Name = c.String(),
                         Description = c.String(),
                         Manufacturer = c.String(),

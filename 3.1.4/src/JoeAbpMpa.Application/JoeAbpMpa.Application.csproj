@@ -185,6 +185,15 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\AssetAppService.cs" />
+    <Compile Include="Assets\AssetDtoMapping.cs" />
+    <Compile Include="Assets\Dto\AssetDto.cs" />
+    <Compile Include="Assets\Dto\CreateAssetInput.cs" />
+    <Compile Include="Assets\Dto\GetAssetOutput.cs" />
+    <Compile Include="Assets\Dto\GetAssetInput.cs" />
+    <Compile Include="Assets\IAssetAppService.cs" />
+    <Compile Include="Assets\Dto\UpdateAssetInput.cs" />
+    <Compile Include="Assets\IDtoMapping.cs" />
     <Compile Include="JoeAbpMpaApplicationModule.cs" />
     <Compile Include="JoeAbpMpaAppServiceBase.cs" />
     <Compile Include="Authorization\Accounts\AccountAppService.cs" />

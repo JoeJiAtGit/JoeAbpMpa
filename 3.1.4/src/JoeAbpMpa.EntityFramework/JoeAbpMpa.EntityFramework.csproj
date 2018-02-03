@@ -198,6 +198,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="EntityFramework\JoeAbpMpaDbContext.cs" />
+    <Compile Include="EntityFramework\Repositories\AssetRepository.cs" />
     <Compile Include="EntityFramework\Repositories\JoeAbpMpaRepositoryBase.cs" />
     <Compile Include="Migrations\201707261347311_Initial_Migration.cs" />
     <Compile Include="Migrations\201707261347311_Initial_Migration.Designer.cs">
@@ -207,9 +208,9 @@
     <Compile Include="Migrations\201710131316266_UpgradedTo_ABP_3.1.Designer.cs">
       <DependentUpon>201710131316266_UpgradedTo_ABP_3.1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201801240925531_Add_AssetEntity.cs" />
-    <Compile Include="Migrations\201801240925531_Add_AssetEntity.Designer.cs">
-      <DependentUpon>201801240925531_Add_AssetEntity.cs</DependentUpon>
+    <Compile Include="Migrations\201801290044134_Asset_Entity_add.cs" />
+    <Compile Include="Migrations\201801290044134_Asset_Entity_add.Designer.cs">
+      <DependentUpon>201801290044134_Asset_Entity_add.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\AbpZeroDbMigrator.cs" />
     <Compile Include="Migrations\Configuration.cs" />
@@ -242,8 +243,8 @@
     <EmbeddedResource Include="Migrations\201710131316266_UpgradedTo_ABP_3.1.resx">
       <DependentUpon>201710131316266_UpgradedTo_ABP_3.1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201801240925531_Add_AssetEntity.resx">
-      <DependentUpon>201801240925531_Add_AssetEntity.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201801290044134_Asset_Entity_add.resx">
+      <DependentUpon>201801290044134_Asset_Entity_add.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

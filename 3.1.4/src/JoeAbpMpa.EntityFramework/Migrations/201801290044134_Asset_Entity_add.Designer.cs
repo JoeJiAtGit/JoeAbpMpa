@@ -7,13 +7,13 @@ namespace JoeAbpMpa.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.2.0-61023")]
-    public sealed partial class Add_AssetEntity : IMigrationMetadata
+    public sealed partial class Asset_Entity_add : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(Add_AssetEntity));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(Asset_Entity_add));
         
         string IMigrationMetadata.Id
         {
-            get { return "201801240925531_Add_AssetEntity"; }
+            get { return "201801290044134_Asset_Entity_add"; }
         }
         
         string IMigrationMetadata.Source
